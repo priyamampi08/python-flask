@@ -4,3 +4,16 @@ on:
   push:
     branches:
       - test
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check files
+        run: |
+          echo "GitHub Actions is working!"
+          ls -la
